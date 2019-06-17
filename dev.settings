@@ -1,0 +1,7 @@
+{ 
+	"SqlServerName" : "localhost",
+	"SsasServerName" : "localhost\\ssas_tab",
+	"DatabaseName" : "MsBip",
+	"FolderName" : "MsBip",
+	"Path" : "e:\\MsBip\\Release2\\"
+}

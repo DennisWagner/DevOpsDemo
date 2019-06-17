@@ -1,0 +1,17 @@
+PRINT 'Creating users table'
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Users](
+	[UserName] [varchar](50)  NOT NULL,
+	[Salary] [int] NOT NULL
+)
+END
+GO  
+
+IF NOT EXISTS (SELECT TOP 1 * FROM Users WHERE UserName = 'Dennis')
+BEGIN
+	INSERT INTO [dbo].[Users] ([UserName], [Salary]) 
+	VALUES ('Dennis', 100)
+END
+GO

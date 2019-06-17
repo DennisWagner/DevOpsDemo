@@ -1,0 +1,5 @@
+
+
+UPDATE [dbo].[Users] 
+  SET [Salary] = 200 
+WHERE UserName = 'Dennis' AND Salary = 100 
